@@ -1,0 +1,77 @@
+import 'package:flutter/material.dart';
+
+class Supercarnews extends StatelessWidget {
+  final topBar = new AppBar(
+    backgroundColor: Colors.black12,
+
+    centerTitle: true,
+    elevation: 1.0,
+    //leading: new Icon(Icons.camera_alt),
+    title: SizedBox(
+        height: 50.0,
+        child: Image.asset(
+            "assets/images/supercar-shop-logo-9E7C559515-seeklogo.com.png")),
+    actions: <Widget>[
+      Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12.0),
+            //child: Icon(Icons.send),
+          ),
+        ],
+      ),
+    ],
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+        appBar: topBar,
+        body: new Container(),
+        bottomNavigationBar: new Container(
+          color: Colors.white,
+          height: 50.0,
+          alignment: Alignment.center,
+          child: new BottomAppBar(
+            child: new Row(
+              // alignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                new IconButton(
+                  icon: Icon(
+                    Icons.home,
+                  ),
+                  onPressed: () {},
+                ),
+                new IconButton(
+                  icon: Icon(
+                    Icons.search,
+                  ),
+                  onPressed: null,
+                ),
+                new IconButton(
+                  icon: Icon(
+                    Icons.add_box,
+                  ),
+                  onPressed: null,
+                ),
+                new IconButton(
+                  icon: Icon(
+                    Icons.favorite,
+                  ),
+                  onPressed: null,
+                ),
+                new IconButton(
+                  icon: Icon(
+                    Icons.account_box,
+                  ),
+                  onPressed: null,
+                ),
+
+              ],
+            ),
+          ),
+        ));
+  }
+}
+
